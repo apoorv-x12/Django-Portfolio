@@ -4,3 +4,7 @@ from django.shortcuts import render
 def index(request):
     context={}
     return render(request,'main/index.html',context)
+
+def projects(request):
+    context={}
+    return render(request,'main/projects.html',context)
