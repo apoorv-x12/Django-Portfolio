@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+{% include 'main/nav.html' %}
+
+<div class="container">
+    <h1 class="center-align">Books which are sacred to me</h1>
+
+    <div class="row">
+
+        <div class="col s12 m4">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <img class="materialboxed responsive-img" src="https://www.vridhamma.org/sites/default/files/picture-bar/Life%20of%20the%20Buddha_1.jpg" >
+                    <span class="card-title">Books</span>
+                    <p>
+                        These are the books that i hold very dear to me the teachings of These
+                        books are beyond all my stupid ideations,prejudices and notions about myself and i try to be 
+                        like the sages who wrote these books but the difference between  me and them is like 
+                        a small dust of sand and the cosmos.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col s12 m8">
+            <div class="carousel">
+            <a class="carousel-item" href="#"><img class="materialboxed responsive-img" src="https://images-na.ssl-images-amazon.com/images/I/91eDLsTqc2L.jpg"></a>    
+            <a class="carousel-item" href="#"> <img  class="materialboxed responsive-img" src="https://www.kfionline.org/wp-content/uploads/2017/04/Freedom-from-the-Known.png"></a>
+            <a class="carousel-item" href="#">  <img  class="materialboxed responsive-img" src="https://imsiddhartha.files.wordpress.com/2013/07/screen-shot-2013-07-03-at-2-08-45-pm.png"></a>
+                
+            </div>
+
+        </div>
+        
+    </div>
+    
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems);
+            });
+
+</script>
+
+
+{% endblock %}

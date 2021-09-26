@@ -12,3 +12,8 @@ def projects(request):
 def languages(request):
     context={}
     return render(request,'main/languages.html',context)
+
+
+def books(request):
+    context={}
+    return render(request,'main/books.html',context)
