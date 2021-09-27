@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,3 +135,52 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Application Realated Data
+
+DATA = json.load(open(os.path.join(BASE_DIR,'data.json')))
+
+# actually DATA gets same details like DATA1 from data.json but emojis are not rendered so hence i used below
+# DATA1 for them and i have redundantly used DATA1 i know(means i have not defined only those keys in DATA1 with emojis but defined all)
+# i did this redundancy coz 1->laziness 2->not always is redundancy bad!(this opinion is subject to change!!)
+DATA1 = { 
+
+   "NAME":"Apoorv Shrivastava",
+
+   "ABOUT_ME":'''Hi there I am Apoorv Shrivastava 👋
+                🔭 I’m currently working on some Django Projects and Web Development.
+                🌱 I’m currently learning Django Framework(Server Side Scripting) and Front end framework(React).
+                👯 I’m looking to collaborate on Web Development,App development, Devops, Kubernetes.
+                🤔 I’m looking for help with Kubernetes,Devops.''',
+
+    "LANGUAGES": [
+            "C++ 🌱",
+            "Java 🌱",
+            "Python 🌱",
+            "JavaScript 🌱",
+            "Django 🔭",    
+         ],
+
+    "PROJECTS":
+           [
+            ("filter_drama","My Portfolio Website (click here to read project's summary)",
+        '''My Portfolio Website is my project that i made using 
+            basic css, html, javascript and django along with materialize.css framework.''',
+           "click here to visit the website","#","red lighten-3"),
+        
+       ("place","The Lost World (Game) (click here to read project's summary)",
+        '''The Lost World is a 2D sidescrolling game that i made with my college group using Unity and C# language.'''
+           ,"click here to see gameplay video","https://www.youtube.com/watch?v=36LNr126_SY","lime lighten-4"),
+
+        ("whatshot","World Chess Champions (click here to read project's summary)",
+        '''This is a tribute website i made using very basic js, css, html as a tribute to my 3 favourite world chess champions.'''
+            ,"click here to visit the website","https://apoorv-x12.github.io/World-chess-champions/","orange lighten-4"),
+           ],
+
+    "BOOKS_SUMMARY":
+        ''' These are the books that i hold very sacred to me, the teachings of These
+            books are beyond all my stupid ideations,prejudices and notions about myself and i try to be 
+            like the sages who wrote these books but the difference between  me and them is like 
+            a small dust of sand and the cosmos.''',
+
+}
