@@ -19,11 +19,9 @@
         </div>
         <div class="col s12 m9">
                 <ul class="collection">
-                    <li class="collection-item">C++ 🌱</li>
-                    <li class="collection-item">Java 🌱</li>
-                    <li class="collection-item">Python 🌱</li>
-                    <li class="collection-item">JavaScript 🌱</li>
-                    <li class="collection-item">Django 🔭</li>
+                    {% for language in languages %}
+                    <li class="collection-item">{{language}}</li>
+                    {% endfor %}
                 </ul>
 
         </div>

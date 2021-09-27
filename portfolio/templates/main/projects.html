@@ -23,12 +23,23 @@
 
         <div class="col s12 m7">
             <ul class="collapsible indigo lighten-4 black-text">
+                {% for icon,title,sum,click,link,color in projects %}
                 <li>
-                    <div class="collapsible-header red lighten-3 "><i class="material-icons">filter_drama</i>My Portfolio Website (click here to read project's summary)</div>
-                    <div class="collapsible-body"><span>My Portfolio Website is my project that i made using 
-                        basic css, html, javascript and django along with materialize.css framework.
-                    </span></div>
-                    <div> <a style="color:black;" target="_blank" href="#">click here to visit the website</a> </div>
+                    <div class="collapsible-header {{color}} "><i class="material-icons">{{icon}}</i>{{title}}</div>
+                    <div class="collapsible-body"><span>{{sum}}
+                        </span></div>
+                    <div> <a style="color:black;" target="_blank" href="{{link}}">{{click}}</a> </div>
+                </li>
+                {% endfor %}
+
+                <!-- 
+                ------NOTE: this commented portion was before using json and django template like above
+                <li>
+                <div class="collapsible-header red lighten-3 "><i class="material-icons">filter_drama</i>My Portfolio Website (click here to read project's summary)</div>
+                <div class="collapsible-body"><span>My Portfolio Website is my project that i made using 
+                    basic css, html, javascript and django along with materialize.css framework.
+                </span></div>
+                <div> <a style="color:black;" target="_blank" href="#">click here to visit the website</a> </div>
                 </li>
                 <li>
                     <div class="collapsible-header lime lighten-4"><i class="material-icons">place</i>The Lost World (Game) (click here to read project's summary)</div>
@@ -41,7 +52,9 @@
                     <div class="collapsible-body"><span>This is a tribute website i made using very basic js, css, html as a tribute to my 3 favourite world chess champions.</span>
                     </div>
                     <div> <a style="color:black;" target="_blank" href="https://apoorv-x12.github.io/World-chess-champions/">click here to visit the website</a> </div>
-                </li>
+                </li> 
+                -->
+
             </ul>
         </div>
     </div>
