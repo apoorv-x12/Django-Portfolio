@@ -4,4 +4,4 @@
  
  https://youtu.be/IJjZ7bZaS2Q 
  
- yet to deploy......(can't deploy on github since it's dynamic website and uses django hence will have to do it on horeku which is litle bit more complicated.)
+ yet to deploy......(can't deploy on github since it's dynamic website and uses django hence will have to do it on horeku which is little bit more complicated.)
